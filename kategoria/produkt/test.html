@@ -73,9 +73,7 @@
                     <p class="cena_produktu_jedno">Cena jednostkowa:  60kkaps. (1,50 zł / 1kaps.)</p>
                     <p class="availability"></p>  <!-- Miejsce na informację o dostępności -->
                     <div class="number-input">
-                        <button class="minus">-</button>
                         <input type="number" id="quantity" name="quantity" value="1" min="1" max="20">
-                        <button class="plus">+</button>
                         <a class="przycisk_produkt">Dodaj do koszyka</a>
                     </div>
                 </div>
@@ -207,5 +205,16 @@
             </div>
         </div>
     </div>
+
+    <script>
+        window.addEventListener('load', function () {
+            // Sprawdź w sessionStorage, czy strona została już odświeżona
+            if (!sessionStorage.getItem('hasRefreshed')) {
+                // Jeśli nie, ustaw flagę w sessionStorage i odśwież stronę
+                sessionStorage.setItem('hasRefreshed', 'true');
+                window.location.reload();
+            }
+        });
+    </script>
 </body>
 </html>
