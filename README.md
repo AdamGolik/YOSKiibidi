@@ -1,1 +1,1 @@
-# YOSKiibidi
+# Proteinowy-skelp
